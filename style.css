@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500&display=swap");
+
+.dark-div {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.w-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box {
+  height: 250px;
+  text-align: center;
+  color: rgb(53, 53, 53);
+  border-radius: 10px;
+  overflow: hidden;
+  /* background-color: rgb(197, 227, 255); */
+  background-color: rgb(255, 219, 193);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 4px 9px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 9px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 9px -7px rgba(0, 0, 0, 0.75);
+  transition: 0.5s ease-in-out;
+}
+
+.box img {
+  width: 80px;
+  animation: moveImg 3s linear infinite;
+}
+
+/* Anime img----------- */
+@keyframes moveImg {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.box h3 {
+  letter-spacing: 1px;
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.box h4 {
+  font-size: 30px;
+  font-family: "Spartan", sans-serif;
+}
+
+.box h4 span {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.dark-theme {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+.dark-theme .theme-icon {
+  width: 20px;
+}
+
+.light {
+  display: none;
+}
+
+/* Dark body-------------- */
+.dark-body {
+  color: white;
+  background-color: rgb(31, 37, 49);
+  transition: 0.5s ease-in-out;
+}
+
+.dark-body .box {
+  color: white;
+  background-color: rgb(40, 46, 59);
+}
+
+.dark-body .light {
+  display: block;
+}
+
+.dark-body .dark {
+  display: none;
+}
+
+/* .dark-body{
+    z-index: 222;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250vw;
+    height: 250vw;
+    border-radius: 50%;
+    transition: 1000ms ease-in-out;
+    background-color: #161616;
+    transform: scale(0);
+    display: flex;
+    flex: 0 0 auto;
+} 
+
+.dark-body .dark:active{
+    transform: scale(1);
+    transition: 1000ms ease-in-out;
+}*/
